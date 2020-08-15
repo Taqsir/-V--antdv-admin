@@ -5,19 +5,19 @@
         <img alt="logo" class="logo" src="@/assets/img/logo.png" />
         <span class="title">{{systemName}}</span>
       </div>
-      <div class="desc">Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+      <div class="desc">{{systemName}} Design </div>
     </div>
     <div class="login">
       <a-form @submit="onSubmit" :form="form">
         <a-tabs size="large" :tabBarStyle="{textAlign: 'center'}" style="padding: 0 2px;">
-          <a-tab-pane tab="账户密码登录" key="1">
+          <a-tab-pane tab="Sign in" key="1">
             <a-alert type="error" :closable="true" v-show="error" :message="error" showIcon style="margin-bottom: 24px;" />
             <a-form-item>
               <a-input
                 autocomplete="autocomplete"
                 size="large"
                 placeholder="admin"
-                v-decorator="['name', {rules: [{ required: true, message: '请输入账户名', whitespace: true}]}]"
+                v-decorator="['name', {rules: [{ required: true, message: 'Please enter your username', whitespace: true}]}]"
               >
                 <a-icon slot="prefix" type="user" />
               </a-input>
@@ -25,16 +25,16 @@
             <a-form-item>
               <a-input
                 size="large"
-                placeholder="888888"
+                placeholder="123"
                 autocomplete="autocomplete"
                 type="password"
-                v-decorator="['password', {rules: [{ required: true, message: '请输入密码', whitespace: true}]}]"
+                v-decorator="['password', {rules: [{ required: true, message: 'Please enter password', whitespace: true}]}]"
               >
                 <a-icon slot="prefix" type="lock" />
               </a-input>
             </a-form-item>
           </a-tab-pane>
-          <a-tab-pane tab="手机号登录" key="2">
+          <a-tab-pane tab="Sign up" key="2">
             <a-form-item>
               <a-input size="large" placeholder="mobile number" >
                 <a-icon slot="prefix" type="mobile" />
@@ -48,25 +48,25 @@
                   </a-input>
                 </a-col>
                 <a-col :span="8" style="padding-left: 4px">
-                  <a-button style="width: 100%" class="captcha-button" size="large">获取验证码</a-button>
+                  <a-button style="width: 100%" class="captcha-button" size="large">Get code</a-button>
                 </a-col>
               </a-row>
             </a-form-item>
           </a-tab-pane>
         </a-tabs>
         <div>
-          <a-checkbox :checked="true" >自动登录</a-checkbox>
-          <a style="float: right">忘记密码</a>
+          <a-checkbox :checked="true" >Save me</a-checkbox>
+          <a style="float: right">forget password</a>
         </div>
         <a-form-item>
-          <a-button :loading="logging" style="width: 100%;margin-top: 24px" size="large" htmlType="submit" type="primary">登录</a-button>
+          <a-button :loading="logging" style="width: 100%;margin-top: 24px" size="large" htmlType="submit" type="primary">Login</a-button>
         </a-form-item>
         <div>
-          其他登录方式
+          Authorized by
           <a-icon class="icon" type="alipay-circle" />
           <a-icon class="icon" type="taobao-circle" />
           <a-icon class="icon" type="weibo-circle" />
-          <router-link style="float: right" to="/dashboard/workplace" >注册账户</router-link>
+          <router-link style="float: right" to="/dashboard/workplace" >Register account</router-link>
         </div>
       </a-form>
     </div>
@@ -117,7 +117,7 @@ export default {
         this.setPermissions(permissions)
         this.setRoles(roles)
         setAuthorization({token: loginRes.data.token, expireAt: new Date(loginRes.data.expireAt)})
-        // 获取路由配置
+        // Get routing configuration
         getRoutesConfig().then(result => {
           const routesConfig = result.data.data
           loadRoutes({router: this.$router, store: this.$store, i18n: this.$i18n}, routesConfig)
@@ -151,20 +151,20 @@ export default {
           font-size: 33px;
           color: @title-color;
           font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-          font-weight: 600;
+          font-weight: 800;
           position: relative;
           top: 2px;
         }
       }
       .desc {
-        font-size: 14px;
+        font-size: 12px;
         color: @text-color-second;
         margin-top: 12px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
       }
     }
     .login{
-      width: 368px;
+      width: 350px;
       margin: 0 auto;
       @media screen and (max-width: 576px) {
         width: 95%;

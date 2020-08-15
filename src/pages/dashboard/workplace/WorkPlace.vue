@@ -10,8 +10,8 @@
       <head-info class="split-right" :title="$t('visit')" content="2,223"/>
     </template>
     <template>
-      <a-row style="margin: 0 -12px">
-        <a-col style="padding: 0 12px" :xl="16" :lg="24" :md="24" :sm="24" :xs="24">
+      <a-row style="margin: 0 -7px">
+        <a-col style="padding: 0 7px" :xl="16" :lg="24" :md="24" :sm="24" :xs="24">
           <a-card class="project-list" :loading="loading" style="margin-bottom: 24px;" :bordered="false" :title="$t('progress')" :body-style="{padding: 0}">
             <a slot="extra">{{$t('all')}}</a>
             <div>

@@ -7,7 +7,8 @@ module.exports = {
       keyword: '搜索关键词',
       count: '用户数',
       range: '周涨幅',
-      introduce: '指标说明'
+      introduce: '指标说明',
+      users: 'CN-Users',
     },
     HK: {
       search: '搜索用戶數',
@@ -16,7 +17,8 @@ module.exports = {
       keyword: '搜索關鍵詞',
       count: '用戶數',
       range: '周漲幅',
-      introduce: '指標說明'
+      introduce: '指標說明',
+      users: 'HK-Users',
     },
     US: {
       search: 'Search Users',

@@ -13,7 +13,7 @@
         :labelCol="{span: 7}"
         :wrapperCol="{span: 10}"
       >
-        <a-range-picker style="width: 100%" />
+        <a-range-picker separator="-" style="width: 100%" />
       </a-form-item>
       <a-form-item
         :label="$t('describe')"

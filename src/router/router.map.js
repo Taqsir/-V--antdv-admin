@@ -14,16 +14,17 @@ const routerMap = {
   },
   root: {
     path: '/',
-    name: '首页',
+    name: 'Home',
     redirect: '/login',
     component: view.tabs
   },
+
   dashboard: {
     name: 'Dashboard',
     component: view.blank
   },
   workplace: {
-    name: '工作台',
+    name: 'Workplace',
     component: () => import('@/pages/dashboard/workplace')
   },
   analysis: {

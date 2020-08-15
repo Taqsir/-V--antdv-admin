@@ -4,3 +4,4 @@ const {setting} = require('./default')
 const config = deepMerge(setting, _config)
 
 module.exports = config
+

@@ -1,14 +1,15 @@
-// antd 配置
+// antd Configuration
 const ANTD = {
   primary: {
-    color: '#1890ff',
-    warning: '#faad14',
+    color: '#1376f1ff',
+    warning: '#F7B924',
     success: '#52c41a',
-    error: '#f5222d',
+    error: '#D92550',
     light: {
       menuColors: ['#000c17', '#001529', '#002140']
     },
     dark: {
+      // menuColors: ['#294F93', '#204078', '#295096']   // darkblue
       menuColors: ['#000c17', '#001529', '#002140']
     },
     night: {
@@ -35,7 +36,7 @@ const ANTD = {
       'menu-dark-color': 'rgba(254, 254, 254, 0.65)',
       'menu-dark-highlight-color': '#fefefe',
       'menu-dark-arrow-color': '#fefefe',
-      'btn-primary-color': '#fff',
+      'btn-primary-color': '#ffffff',
     },
     light: {
       'layout-body-background': '#f0f2f5',

@@ -6,7 +6,7 @@ const ADMIN = {
     mode: {
       DARK: 'dark',
       LIGHT: 'light',
-      NIGHT: 'night'
+      NIGHT: 'night',
     }
   },
   layout: {

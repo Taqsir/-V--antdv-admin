@@ -7,7 +7,7 @@ const options = {
   routes: [
     {
       path: '/login',
-      name: '登录页',
+      name: 'Login',
       component: () => import('@/pages/login')
     },
     {
@@ -22,13 +22,13 @@ const options = {
     },
     {
       path: '/',
-      name: '首页',
+      name: 'Home',
       component: TabsView,
       redirect: '/login',
       children: [
         {
           path: 'dashboard',
-          name: 'Dashboard',
+          name: 'dashboard',
           meta: {
             icon: 'dashboard'
           },
@@ -36,19 +36,19 @@ const options = {
           children: [
             {
               path: 'workplace',
-              name: '工作台',
+              name: 'workplace',
               component: () => import('@/pages/dashboard/workplace'),
             },
             {
               path: 'analysis',
-              name: '分析页',
+              name: 'analysis',
               component: () => import('@/pages/dashboard/analysis'),
             }
           ]
         },
         {
           path: 'form',
-          name: '表单页',
+          name: 'Form',
           meta: {
             icon: 'form',
           },
@@ -56,24 +56,24 @@ const options = {
           children: [
             {
               path: 'basic',
-              name: '基础表单',
+              name: 'Basic',
               component: () => import('@/pages/form/basic'),
             },
             {
               path: 'step',
-              name: '分步表单',
+              name: 'Step',
               component: () => import('@/pages/form/step'),
             },
             {
               path: 'advance',
-              name: '高级表单',
+              name: 'Advance',
               component: () => import('@/pages/form/advance'),
             }
           ]
         },
         {
           path: 'list',
-          name: '列表页',
+          name: 'List',
           meta: {
             icon: 'table'
           },
@@ -81,7 +81,7 @@ const options = {
           children: [
             {
               path: 'query',
-              name: '查询表格',
+              name: 'Query',
               meta: {
                 authority: 'queryForm',
               },
@@ -89,32 +89,32 @@ const options = {
             },
             {
               path: 'primary',
-              name: '标准列表',
+              name: 'Primary',
               component: () => import('@/pages/list/StandardList'),
             },
             {
               path: 'card',
-              name: '卡片列表',
+              name: 'Card',
               component: () => import('@/pages/list/CardList'),
             },
             {
               path: 'search',
-              name: '搜索列表',
+              name: 'Search',
               component: () => import('@/pages/list/search/SearchLayout'),
               children: [
                 {
                   path: 'article',
-                  name: '文章',
+                  name: 'Article',
                   component: () => import('@/pages/list/search/ArticleList'),
                 },
                 {
                   path: 'application',
-                  name: '应用',
+                  name: 'Application',
                   component: () => import('@/pages/list/search/ApplicationList'),
                 },
                 {
                   path: 'project',
-                  name: '项目',
+                  name: 'Project',
                   component: () => import('@/pages/list/search/ProjectList'),
                 }
               ]
@@ -123,7 +123,7 @@ const options = {
         },
         {
           path: 'details',
-          name: '详情页',
+          name: 'Details',
           meta: {
             icon: 'profile'
           },
@@ -143,7 +143,7 @@ const options = {
         },
         {
           path: 'result',
-          name: '结果页',
+          name: 'Result',
           meta: {
             icon: 'check-circle-o',
           },
@@ -152,6 +152,9 @@ const options = {
             {
               path: 'success',
               name: '成功',
+              meta: {
+                icon: 'check',
+              },
               component: () => import('@/pages/result/Success')
             },
             {
@@ -163,7 +166,7 @@ const options = {
         },
         {
           path: 'exception',
-          name: '异常页',
+          name: 'Exception',
           meta: {
             icon: 'warning',
           },
@@ -188,7 +191,7 @@ const options = {
         },
         {
           path: 'components',
-          name: '小组件',
+          name: 'Components',
           meta: {
             icon: 'appstore-o'
           },
@@ -207,7 +210,7 @@ const options = {
           ]
         },
         {
-          name: '验权表单',
+          name: 'AuthForm',
           path: 'auth/form',
           meta: {
             icon: 'file-excel',

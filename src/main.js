@@ -12,7 +12,7 @@ import {initI18n} from '@/utils/i18n'
 import bootstrap from '@/bootstrap'
 
 const router = initRouter(store.state.setting.asyncRoutes)
-const i18n = initI18n('CN', 'US')
+const i18n = initI18n('US','CN')
 bootstrap({router, store, i18n})
 
 Vue.config.productionTip = false
